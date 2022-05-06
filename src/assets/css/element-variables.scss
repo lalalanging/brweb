@@ -1,0 +1,22 @@
+/* 改变主题色变量 */
+$--color-primary: teal;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/base.scss';
+@import '~element-ui/packages/theme-chalk/src/icon.scss';
+@import '~element-ui/packages/theme-chalk/src/button.scss';
+@import '~element-ui/packages/theme-chalk/src/image.scss';
+@import './element-btn.scss';
+@import './element-elmenu.scss';
+
+h1 span::after{
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 2px solid #FCB814;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
