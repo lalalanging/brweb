@@ -1,10 +1,13 @@
 <template>
   <div>
-    <HomeOne />
-    <HomeTwo />
-    <HomeThree />
-    <HomeFour />
-    <HomeFive />
+
+    <full-page :options="options" ref="fullpage">
+      <HomeOne class="section"/>
+      <HomeTwo class="section"/>
+      <HomeThree class="section"/>
+      <HomeFour class="section"/>
+      <HomeFive class="section"/>
+    </full-page>
   </div>
 </template>
 
@@ -15,7 +18,6 @@ import HomeThree from '@/components/Home/HomeThree.vue';
 import HomeFour from '@/components/Home/HomeFour.vue';
 import HomeFive from '@/components/Home/HomeFive.vue';
 
-
 export default {
   components: { 
     HomeOne, 
@@ -24,8 +26,22 @@ export default {
     HomeFour, 
     HomeFive
   },
+  data() {
+    return {
+      options: {
+        licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
+      }
+      
+    }
+  },
+  methods: {
+    next() {
+      // 向下滚动一页
+      this.$refs.fullpage.api.moveSectionDown();
+    }
+  }
 }
 </script>
 
-<style>
+<style scoped>
 </style>
