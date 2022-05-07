@@ -7,7 +7,7 @@
                 :src="bigimgurl"
                 ></el-image>
         </div>
-        <div style= "font-family= 'Microsoft Yahei Light'; margin-top: 17vw; margin-left: 48vw">
+        <div style= "font-family= 'Microsoft Yahei Light'; margin-top: 17vw; margin-left: 49.2vw">
             <h1 style="margin-bottom: 2vw"><span>主营产品</span></h1>
             <h2 style="margin-bottom: 2vw">{{pointedproduct}}</h2>
             <p style="margin-bottom: 5vw"><a class="btn bg-white" onclick="" href="" target=_self> 

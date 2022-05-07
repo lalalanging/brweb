@@ -13,21 +13,32 @@
                     width: inherit;
                     padding-top: calc( 100vw * 660/ 3840 );">
             <div 
-                class="details_li"
+                :class="showDetail == i? 'details_li' : 'details_tp'"
                 v-for="(item, i) in detaillist"
                 v-bind:id="item.id"
                 :key="i"
+                @mouseover="showfull($event,item.id,i)"
+                @mouseout="hiddenfull($event,item.id)"
               >
                 <div style="height: 2vw; display: block" v-show="showDetail != i"></div>
-                <div style="display: inline-block; padding-top: 1vw; height: 2vw; min-height: 20px; width: 60%">
+                <div style="display: inline-block; 
+                    padding-top: 1vw; 
+                    height: 2vw; 
+                    min-height: 20px; 
+                    width: 65%;
+                    margin-left: 20px;">
                     <h1 ><span>{{item.brief}}</span></h1>
                 </div>
-                <div class="support-circle" v-show="showDetail != i" @click="showfull($event, i)">
+                <div class="support-circle" v-show="showDetail != i">
                     <span class="support-num">+</span>
                 </div>
                 <div style="height: 1vw; display: block; width: inherit" v-show="showDetail == i"></div>
                 <div style="display: block; width:inherit">
-                    <div style="display: inline-block; width: 60%; vertical-align: top" v-show="showDetail == i">{{detaillist[i].full}}
+                    <div style="display: inline-block; 
+                        margin-left: 20px;
+                        width: 60%; vertical-align: top" 
+                        v-show="showDetail == i">
+                    {{detaillist[i].full}}
                     </div>
                     <div style="display: inline-block; vertical-align: top" v-show="showDetail == i">
                         <img :src="item.icon" style="margin-left: 2vw;" />
@@ -70,12 +81,19 @@ export default {
     },
 
     methods: {
-        showfull($event, i){
+        showfull($event, id, i){
             this.showDetail = i; //swith position and display full description
             // change background picture
             this.bgsrc = this.bg03list[i];
             // change block background
+            document.getElementById(id).backgroundColor = "transparent"
+            console.log("setup up:"+ id + "to" + document.getElementById(id).backgroundColor)
         },
+        hiddenfull($event, id){
+            this.showDetail = 9; //swith position and display full description
+            //document.getElementById(id).background="transparent";
+            console.log(document.getElementById(id).backgroundColor);
+        },        
     },
 }
 </script>
@@ -87,11 +105,18 @@ export default {
 }
 .details_li {
     display: block;
-    min-height: 100px;
+    min-height: 140px;
     height: 8vw;
     width: inherit;
-    padding-left: 2vw;
-    padding-right: 3.5vw;
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 13px;
+    background-color: rgba(0,0,0,0.3);
+}
+.details_tp {
+    display: block;
+    min-height: 120px;
+    height: 8vw;
+    width: inherit;
     font-family: "SourceHanSansCN-Regular";
     font-size: 13px;
 }

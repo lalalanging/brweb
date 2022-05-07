@@ -11,7 +11,7 @@
           class="el-menu-headnav"
           mode="horizontal" 
           @select="handleSelect"
-          router="true"
+          router="true">
           >
           <el-submenu index="1">
             <template slot="title">关于我们</template>
@@ -52,6 +52,11 @@
 <script>
    export default {
     name: "AppNavigator",
+    props: {
+        props: {
+          invent: Boolean
+        }
+    },
     data() {
       return {
         activeIndex: '1'

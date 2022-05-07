@@ -1,5 +1,5 @@
 <template>
-  <div fluid id="homepage4bg" style="display: block">
+  <div fluid id="homepage4bg" style="display: block; position: relative">
       <div id="home4-text-box1">
           2023年拟建设完成的二期工程用地
       </div>
@@ -10,6 +10,7 @@
             远大再生资源公司系远大科技集团控股子公司，成立于2008年，主要从事废矿物油(HW08全项)和废乳化液(HW09)全项的综合利用。公司以独创技术将工业、交通产生的废矿物油及废乳化液作为原料生产成再生润滑油基础油产品，是一家生态环境治理、废弃资源综合利用企业。      
           </div>
       </div>
+      <div style="padding-left: 70%; padding-top: 50%;">远大再生资源公司位于湘江新区湘阴高新区鸟瞰图</div>
   </div>
 </template>
 
@@ -42,6 +43,7 @@ export default {
     object-fit: contain;
 }
 #home4-text-box1 {
+    position: absolute;
     width: calc(100vw * 750 / 3840);
     height: calc(100vw * 46 / 3840);
     font-size: calc(100vw * 48 / 3840);
@@ -53,17 +55,18 @@ export default {
     top: calc(100vw * 616 / 3840); 
 }
 #home4-text-box2 {
+    position: absolute;
     width: calc(100vw * 690 / 3840);
     height: calc(100vw * 808 / 3840);
     background: #F6F6F6;
     opacity: 0.9;
-    font-size-adjust: 0.34;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
     left: calc(100vw * 400 / 3840);
     top: calc(100vw * 1168 / 3840);
     line-height: calc(100vw * 56 / 3840);
-    
 }
 #home4-text-box2 h1 {
-    font-size-adjust: 0.25;
+    font-size: 18px;
 }
 </style>

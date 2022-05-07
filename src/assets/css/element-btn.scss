@@ -27,6 +27,8 @@
     background: #F8F5F3; }
   .btn.bg-white:after {
     background: white; }
+  .btn.bg-yellow:after {
+      background: #F9BE00; }
   .btn span {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -54,6 +56,10 @@
       transform: translateY(-50%) rotate(45deg);
       /*margin-top: -1px;*/
       /*margin-top: 1px;*/ }
+      .btn.bg-yellow span:before {
+        border-top: 2px solid #FFFFFF;
+        border-right: 2px solid #FFFFFF;
+      }
       @media (max-width: 767px) {
         .btn span:before {
           display: none; } }
@@ -67,6 +73,9 @@
       content: '';
       margin-top: -1px;
       transition: width 0.35s ease-in-out; }
+      .btn.bg-yellow span:after {
+        background: white;
+      }
       @media (max-width: 767px) {
         .btn span:after {
           display: none; } }

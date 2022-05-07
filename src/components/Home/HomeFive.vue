@@ -1,15 +1,16 @@
 <template>
   <div fluid id="homepage5bg">
       <div class="text-box"> 
-        <h1 class="header1">
-            远大再生资源
+        <h1>
+            加入我们，未来可期
         </h1>
-        <h2 class="header2">
-            为世界根除废油污染
+        <h2>
+            有德有才，破格重用；有德低才，培养使用
+            <br>有才低德，教育使用；有才无德，坚决不用
         </h2>
-       <a class="fix-btn" href="" target=_self> 
+       <a class="btn bg-white" href="" target=_self> 
            <span>
-           了解更多
+           加入我们
            </span>
        </a>
       </div>
@@ -52,5 +53,23 @@ export default {
         background-size: cover;
         width: inherit;
         height: calc(100vw * 2160 / 3840);
+}
+.text-box {
+  display: table-cell; 
+  padding-left: calc(100vw * 500 / 3840);
+  padding-top: calc(100vw * 522 / 3840);
+}
+.text-box h1 {
+    font-size: max(calc(100vw * 100/3840), 30px);
+    font-family: "Microsoft YaHei","微软雅黑", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    line-height: calc(100vw * 0.06);
+}
+.text-box h2 {
+    font-size: max(calc(100vw * 40/3840), 12px);
+    font-family: "Microsoft YaHei","微软雅黑", Arial, Helvetica, sans-serif;
+    margin-bottom: 4vh;
+    color: #FFFFFF;
 }
 </style>
